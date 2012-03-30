@@ -1,0 +1,456 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Language" content="ja" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="imagetoolbar" content="no" />
+<link rel="stylesheet" type="text/css" href="css/cavostyle.css">
+      <title>CAVOS 26th Member</title>
+      <!-- JS -->
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/jquery.galleriffic.js"></script>
+      <script type="text/javascript" src="js/jquery.opacityrollover.js"></script>
+      <script type="text/javascript">
+         $(function(){
+            /* flickr情報を出力 */
+            $imgs={
+               "部長 鈴木拓":[
+                  ['members/pic/taku_s/p1.jpg','members/pic/taku_s/p1_tb.jpg','８月１８日生まれ<br><br>50人を超すCAVOSをまとめる冷静さを見せる傍ら、ゲレンデを溶かす程の情熱的な一面を持ちあわす彼<br><br>東工大であるが<br>パソコンに弱いのが難点<br>写真の際はいつもお馴染みの拓ピース☆<br><br>picture 1 of 3'],
+                  ['members/pic/taku_s/p2.jpg','members/pic/taku_s/p2_tb.jpg','ニックネーム：拓　 <br><br>趣味：<br>スノボ・朝風呂　 <br><br>好きな食べ物：ミラノ風ドリア　 <br><br>休日の過ごし方：おねんね　 <br><br>好きな言葉：たくセンパイ　 <br><br>チャームポイント：<br>爽やかな笑顔・素敵な笑顔<br><br>picture 2 of 3'],
+                  ["members/pic/taku_s/p3.jpg","members/pic/taku_s/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               "副部長 徳田裕介":[
+                  ["members/pic/yusuke_t/p1.jpg","members/pic/yusuke_t/p1_tb.jpg",'８月１７日生まれ<br><br>ボードへの思いは吹雪をも無効化する情熱の塊<br><br>お酒が大好きでとてもノリがよくハイテンション<br><bt>変態気質はあるものの根は真面目で情に厚い<br><br>picture 1 of 3'],
+                  ["members/pic/yusuke_t/p2.jpg","members/pic/yusuke_t/p2_tb.jpg",'趣味：なし　 <br><br>好きな食べ物：なし　 <br><br>休日の過ごし方：なし　 <br><br>好きな言葉：なし　 <br><br>好きなタイプ：美乳<br><br>picture 2 of 3'],
+                  ["members/pic/yusuke_t/p3.jpg","members/pic/yusuke_t/p3_tb.jpg","<br><br>picture 3 of 3"]
+               ],
+               '副部長<br>坂本香奈恵':[
+                  ["members/pic/kanae_s/p1.jpg","members/pic/kanae_s/p1_tb.jpg",'９月１８日生まれ<br><br>面倒見がよくセクシーな香奈恵<br><br>ちょっとズボラな所が玉に瑕<br><br>スノボーへの思いが強く初心者からここまで上手になったのは努力と根性の証<br><br>代替えで瓶を空けた彼女の背中はとても頼もしい<br><br>picture 1 of 3'],
+                  ["members/pic/kanae_s/p2.jpg","members/pic/kanae_s/p2_tb.jpg",'好きな食べ物：チョコ・ラーメン<br><br>趣味：地図鑑賞・ラーメン情報収集 <br><br>好きなタイプ：桜井和寿 <br><br>座右の銘：睡眠第一 <br><br>休日の過ごし方：１人カラオケ <br><br>picture 2 of 3'],
+                  ["members/pic/kanae_s/p3.jpg","members/pic/kanae_s/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               '副部長/合宿係<br>高木健人':[
+                  ["members/pic/kent_t/p1.jpg","members/pic/kent_t/p1_tb.jpg",'３月２５日生まれ <br><br>アルプス出身(笑)の彼は<br>Cuteな慶應Boy☆ <br><br>彼は2つの人格を持ちます！ <br><br>白いけんけんはとっても優しいけど <br><br>黒いけんけんは・・・ <br><br>ぁ！けつけつ！けつ出てるよ～！<br><br>picture 1 of 3'],
+                  ["members/pic/kent_t/p2.jpg","members/pic/kent_t/p2_tb.jpg",'ニックネーム：けんけん・けつけつ <br><br>特徴：実はむっつりスケベ <br><br>好きな事：毒を吐く事　 <br><br>好きなタイプ：炎・氷 <br><br>将来の夢：ポケモンマスター <br><br>噂：彼には奥さんが沢山いるみたい・・<br><br>picture 2 of 3'],
+                  ["members/pic/kent_t/p3.jpg","members/pic/kent_t/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               '会計係/追いコン係<br>広木康二':[
+                  ["members/pic/koji_h/p1.jpg","members/pic/koji_h/p1_tb.jpg",'１月２９日生まれ <br><br>見た目はチャラ男、 <br>頭脳は東工大、 <br>仕草は小２、 <br>お酒は弱小、 <br>スノボーは上手・・・その名もCAVOS迷会計広木！！ <br><br>お酒を飲むとすぐ真っ赤になっちゃうの <br><br>picture 1 of 3'],
+                  ["members/pic/koji_h/p2.jpg","members/pic/koji_h/p2_tb.jpg",'趣味：スノボ　 <br><br>好きな言葉：雪<br><br>好きな食べ物：馬刺し　 <br><br>好きなタイプ：北川景子　 <br><br>picture 2 of 3'],
+                  ["members/pic/koji_h/p3.jpg","members/pic/koji_h/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               '会計係/ボードリーダー 中村翔平':[
+                  ["members/pic/shohei_n/p1.jpg","members/pic/shohei_n/p1_tb.jpg",'５月１７日生まれ <br><br>３度の飯よりスノーボードが好き <br><br>バカでアホでどーしよーもないけど <br><br>スノーボードにはすんごい真面目です <br><br>それが翔ちゃんです！ <br><br>picture 1 of 3'],
+                  ["members/pic/shohei_n/p2.jpg","members/pic/shohei_n/p2_tb.jpg",'ニックネーム：しょうちゃん 好きなタイプ：笑顔が笑顔になってない子 <br><br>将来の夢：皆が笑って暮らせる世の中にする事 <br><br>picture 2 of 3'],
+                  ["members/pic/shohei_n/p3.jpg","members/pic/shohei_n/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               'スキーリーダー 上田剛士':[
+                  ["members/pic/takashi_u/p1.jpg","members/pic/takashi_u/p1_tb.jpg",'９月１８日生まれ <br><br>我らがスキーリーダー！ <br><br>優しくって包容力があり <br><br>怒ったところなんて見たことがない！ <br><br>いつもニコニコな安定した上田さん <br><br>たまにＭ２の先輩に見間違われるけどそれも魅力♪<br><br>picture 1 of 3'],
+                  ["members/pic/takashi_u/p2.jpg","members/pic/takashi_u/p2_tb.jpg",'趣味：<br>器械体操・旅行・スノボ・コブ <br><br>好きな食べ物：<br>和食(特に海苔・納豆・煎餅) <br><br>将来の夢：シビルエンジニア <br><br>ニックネーム：たっきー・Ｍ２ <br><br>みんなに一言：Ｍ２ではありません <br><br>気になっている事：<br>社会人になったら<br>なんとよんでくれますか？ <br><br>picture 2 of 3'],
+                  ["members/pic/takashi_u/p3.jpg","members/pic/takashi_u/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               '新歓係<br>大久保洸平':[
+                  ["members/pic/kohei_o/p1.jpg","members/pic/kohei_o/p1_tb.jpg",'７月２３日生まれ <br><br>ラーメン大好きだけど<br>体が弱い大久保さん <br><br>身長180ｃｍ超えの<br>自由人なイケメンである <br><br>繰り広げられるおおくぼワールドに全米が泣いた <br><br>picture 1 of 3'],
+                  ["members/pic/kohei_o/p2.jpg","members/pic/kohei_o/p2_tb.jpg",'座右の銘：運も実力の内 <br><br>好きな言葉：真相は闇の中 <br><br>好きな武器：ライトセーバー <br><br>好きな雪質：パウダー <br><br>好きなタイプ：人前で大きなオナラをしない人がベター <br><br>picture 2 of 3'],
+                  ["members/pic/kohei_o/p3.jpg","members/pic/kohei_o/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               '新歓係 馬場智子':[
+                  ["members/pic/satoko_b/p1.jpg","members/pic/satoko_b/p1_tb.jpg",'８月７日生まれ・Ａ型 （花の日） <br><br>見た目はギャルだが実はひとみしりで我儘なお姫さん <br><br>自らをクールと称するすっとんきょーな性格 <br><br>夏大好きな彼女は初心者ながら <br><br>CAVOSで一番雪山に費やした頑張り屋でもある <br><br>picture 1 of 3'],
+                  ["members/pic/satoko_b/p2.jpg","members/pic/satoko_b/p2_tb.jpg",'好き：<br>ハワイ関係・キラキラ・夏 <br><br>必需品：<br>ツケマツゲ<br>メイクポーチ <br><br>好きな人：<br>浜崎あゆみ<br>長谷川潤 <br><br>好きな場所：<br>横浜・桜木町・みなとみらい <br><br>好きな食べ物：<br>マンゴー・ぐみ・レーズン <br><br>好きなタイプ：<br>色気のある人<br>背が高く黒髪の人 <br><br>注意する事：知らない人に簡単にメアド教えない事！ <br><br>口癖：『ねぇ！聞いて～』 <br>『それってあたしのことかな～ 』 <br><br>picture 2 of 3'],
+                  ["members/pic/satoko_b/p3.jpg","members/pic/satoko_b/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               '新歓係/イベント係 小澤祐香':[
+                  ["members/pic/yuka_o/p1.jpg","members/pic/yuka_o/p1_tb.jpg",'１０月１０日生まれ <br><br>彼女は目の上にゲジゲジを飼ってます<br> 特徴的な声を持っていて <br>お酒が入ると人が変わります <br><br>1女への愛は胸いっぱいではち切れそう！ <br><br>picture 1 of 3'],
+                  ["members/pic/yuka_o/p2.jpg","members/pic/yuka_o/p2_tb.jpg",'ニックネーム：ゆーか <br><br>趣味：Snowboard <br><br>好きなブランド：<br>DEATH LABEL、DC、neff <br><br>好きな食べ物：<br>チュッパチャップス・チーズ <br><br>好きな音楽：<br>SHAKALABBITS、藍坊主 <br><br>好きな場所：原宿 <br><br>憧れガール：AMO、吉高由里子、きゃりーぱみゅぱみゅ、YOU<br><br>picture 2 of 3'],
+                  ["members/pic/yuka_o/p3.jpg","members/pic/yuka_o/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               '新歓係 上田実優':[
+                  ["members/pic/miyu_u/p1.jpg","members/pic/miyu_u/p1_tb.jpg",'２月３日生まれ <br>最高にぷにぷにな二の腕を持つみゆたん <br><br>「みゆ」じゃないです。「みゆう」です。 <br><br>みんな「みゆ」って呼びます。 <br><br>たまに自分でも、「みゆ」なのかなって考えて寝れない夜もあります。 <br><br>みなさん気を付けてください！「みゆう」です。<br><br>picture 1 of 3'],
+                  ["members/pic/miyu_u/p2.jpg","members/pic/miyu_u/p2_tb.jpg",'ニックネーム：ちゃんみゆ・みゆたん <br><br>チャームポイント：肉厚でぷにぷになほっぺ <br><br>好きな芸能人：向井理・宮崎あおい <br><br>好きな食べ物：麦ちょこ・堅あげぽてと <br><br>好きな事：スノボ・絶叫マシーン(富士急行きたい！) <br><br>好きなタイプ：みんなに愛される人・頑張り屋さん <br><br>座右の銘：いつでもどこでも誰とでもpositivethinking! <br><br>特技：合宿やお泊りで全然寝ない事 <br><br>特徴：美味しいものならいくらでもいくらでも食べれる <br><br>picture 2 of 3'],
+                  ["members/pic/miyu_u/p3.jpg","members/pic/miyu_u/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               '新歓係/Web係<br>若竹雅貴':[
+                  ["members/pic/masaki_w/p1.jpg","members/pic/masaki_w/p1_tb.jpg",'８月９日生まれ <br><br>３男唯一のグーフィーの彼 <br>一緒にリフトに乗ると <br>「グーフィーだから板が邪魔」ってよく言われるの <br>でも心の広い彼はいつも自分に言い聞かせている。 <br><br>ちっちゃいことは気にすんな・・・わかちこ・わかちこ♪ <br><br>picture 1 of 3'],
+                  ["members/pic/masaki_w/p2.jpg","members/pic/masaki_w/p2_tb.jpg",'ニックネーム：わかちこ <br><br>チャームポイント：まつ毛 <br><br>休日の過ごし方：グダる <br><br>好きなタイプ：黒木メイサ <br><br>好きな飲み物：ハイネケン <br><br>好きな食べ物：二郎・パセリ・シガール <br><br>趣味：首都高速都心環状線ドライブ <br><br>座右の銘：人間の行動を約束することはできるが、 感情は約束できない。 思うに、感情は気まぐれだからである。 <br><br>好きな言葉：日本語でおk。<br><br>picture 2 of 3'],
+                  ["members/pic/masaki_w/p3.jpg","members/pic/masaki_w/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               '追いコン/カボT係<br>窪田彩織':[
+                  ["members/pic/saori_k/p1.jpg","members/pic/saori_k/p1_tb.jpg",'５月１２日生まれ <br><br>彼女の滑りは雪山の妖精と見間違える程 <br>ほわっとした外見とは裏腹に <br>滑りの切れ味はまるでジャックナイフ！<br><br>picture 1 of 3'],
+                  ["members/pic/saori_k/p2.jpg","members/pic/saori_k/p2_tb.jpg",'ニックネーム：さおり・さおちゃん <br><br>座右の銘：明日やろうは馬鹿やろう <br><br>好きなタイプ：スノーボードができる人♪ <br><br>好きな食べ物：ビールとアボカド <br><br>休日の過ごし方：お散歩 <br><br>picture 2 of 3'],
+                  ["members/pic/saori_k/p3.jpg","members/pic/saori_k/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               '追いコン係/MFC<br>小野里沙耶':[
+                  ["members/pic/saya_o/p1.jpg","members/pic/saya_o/p1_tb.jpg",'９月２９日生まれ <br><br>ＭＦＣ所属-loveまさし様- <br>(まさし様ファンクラブ)<br><br>一見可愛い彼女だが <br>見た目にだまされてはいけない！ <br><br>いつでも斜め路線を行くさやはむしろ天然記念物 <br>雪山ネイルは情熱のレッド！  <br><br>picture 1 of 3'],
+                  ["members/pic/saya_o/p2.jpg","members/pic/saya_o/p2_tb.jpg",'好きな場所：<br>横浜・桜木町・海　 <br><br>休日の過ごし方：さとこの散歩 <br><br>キュンポイント：あたまポンッてされるの　<br><br>picture 2 of 3'],
+                  ["members/pic/saya_o/p3.jpg","members/pic/saya_o/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               '追いコン/Web係<br>塩澤綾乃':[
+                  ["members/pic/ayano_s/p1.jpg","members/pic/ayano_s/p1_tb.jpg",'６月９日生まれ <br><br>マイペースで、下ネタが大好きな <br>ちょっと困り者な彼女！！！<br>…ですが、 <br>女子からの「もし綾乃が男だったら彼氏にしたい!!」 <br>という願望は------堂々のＮｏ．1 U^エ^U☆ <br><br>picture 1 of 3'],
+                  ["members/pic/ayano_s/p2.jpg","members/pic/ayano_s/p2_tb.jpg",'好物：ベーコンレタス　 <br><br>好きな事：<br>カメラ・フォトショ・読書・サプライズを考える事 <br><br>目標：アウトローな人生を信念強く生きる <br><br>好きな動物：<br>うさぎ・パンダ・鷹 <br><br>好きな食べ物：魚介類(特にエビ・カニ・イカ) <br><br>人生のバイブル：小学生の頃からONE PIECE <br><br>ストレス発散：カラオケで１０時間耐久アニソン縛り　 <br><br>好きなタイプ：向上心がありお互い成長できる人　 <br><br>好きなブランド：vivienne westwood・Cath Kidston　<br><br>picture 2 of 3'],
+                  ["members/pic/ayano_s/p3.jpg","members/pic/ayano_s/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               '追いコン係<br>矢崎永実子':[
+                  ["members/pic/emiko_y/p1.jpg","members/pic/emiko_y/p1_tb.jpg",'１０月３０日生まれ <br><br>変顔の代名詞の彼女！ <br><br>１人でもディズニーに行っちゃうミッキー大好きな <br>えみちゃんの変顔は<br>身体を張り女を捨てています！<br><br>picture 1 of 3'],
+                  ["members/pic/emiko_y/p2.jpg","members/pic/emiko_y/p2_tb.jpg",'長所：負けず嫌い <br><br>短所：目の前にあるお尻を触っちゃう事 <br><br>特技：１女のChuを頂く事 <br><br>好き：年パス持つほどのディズニー好き　 <br><br>好きな食べ物：ラーメン <br>(週1で香奈恵とラーメン屋巡りする程) <br><br>休日の過ごし方：ディズニーに行く事 <br><br>好きなタイプ：ミッキー☆ぐいぐいな人 <br><br>チャームポイント：ボンレスハム？<br><br>picture 2 of 3'],
+                  ["members/pic/emiko_y/p3.jpg","members/pic/emiko_y/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               'イベント係<br>古賀理沙子':[
+                  ["members/pic/risako_k/p1.jpg","members/pic/risako_k/p1_tb.jpg",'４月６日生まれ <br><br>ＣＡＶＯＳ一の美女！<br>…にもかかわらず <br>自信でも驚くぐらいの愛すべき馬鹿！ <br><br>今日もまた<br>りさこの魅力に翻弄される虫が後を絶たない <br><br>picture 1 of 3'],
+                  ["members/pic/risako_k/p2.jpg","members/pic/risako_k/p2_tb.jpg",'ニックネーム：りさこ <br><br>好きな食べ物：なんでも！ <br><br>好きなタイプ：笑顔が素敵な人 <br><br>好きなキャラ：リラックマ <br><br>趣味：お菓子作り・キューピー集め <br><br>picture 2 of 3'],
+                  ["members/pic/risako_k/p3.jpg","members/pic/risako_k/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               'イベント係<br>小池小百合':[
+                  ["members/pic/sayuri_k/p1.jpg","members/pic/sayuri_k/p1_tb.jpg",'２月２１日生まれ <br><br>流し目に厚い唇、ＣＡＶＯＳのモンローとは彼女の事 <br><br>欲求不満のパープルを愛する彼女自体 <br>セックスシンボルなのであろう <br><br>雪山で火傷しないよう注意願いたい <br><br>picture 1 of 3'],
+                  ["members/pic/sayuri_k/p2.jpg","members/pic/sayuri_k/p2_tb.jpg",'ニックネーム：ザベス <br><br>好きなタイプ：雪山を愛してる人 <br><br>好きな飲み物：スミノフ <br><br>好きな色：パープル <br><br>趣味：人間観察 <br><br>迷言：『欲求不満のパープルです』 <br><br>将来像：30歳までに子供出産 <br><br>picture 2 of 3'],
+                  ["members/pic/sayuri_k/p3.jpg","members/pic/sayuri_k/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               'イベント係<br>伊藤志歩':[
+                  ["members/pic/shiho_i/p1.jpg","members/pic/shiho_i/p1_tb.jpg",'７月１５日生まれ <br><br>（自称:７つのイチゴの日） <br><br>いつも明るく元気な彼女。<br>気配り上手な人気者。<br><br>自分が知らない話題も知ってるふりして話しちゃうけど、<br>そんなちゃん☆しほには「おいで」って言ってあげよう。<br><br>picture 1 of 3'],
+                  ["members/pic/shiho_i/p2.jpg","members/pic/shiho_i/p2_tb.jpg",'ニックネーム：しほ・ちゃんしほ <br><br>好きな食べ物：お豆腐ハンバーグ・甘いもの <br><br>嫌いな物：イチゴ・板チョコ・辛いもの <br><br>趣味：料理・ショッピング <br>犬とお散歩・海沿いのドライブ <br><br>座右の銘：寝たいときに寝る <br>チョコレートは噛まない <br><br>好きなタイプ：楽しい人・坊主じゃない人・あごのラインが綺麗な人・やっぱりフィーリング <br><br>チャームポイント：小さい耳・左側のえくぼ <br><br>好きな言葉：「おいで」 <br><br>好きな芸能人：優木まおみ・紗江子・小出恵介・時任三郎 <br><br>目標：フル単・痩せる・早口直す・中身から大人になる <br><br>やめなきゃいけない事：身長を盛って言う事・暑いと機嫌が悪くなる事・発言が適当なところ<br><br>picture 2 of 3'],
+                  ["members/pic/shiho_i/p3.jpg","members/pic/shiho_i/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               'イベント係<br>岡本友利果':[
+                  ["members/pic/yurika_o/p1.jpg","members/pic/yurika_o/p1_tb.jpg",'１０月２日生まれ (豆腐の日) <br><br>いつも元気なおっちゃんの笑顔は <br>とてもキラキラしていて見てる方も元気になれます <br><br>picture 1 of 3'],
+                  ["members/pic/yurika_o/p2.jpg","members/pic/yurika_o/p2_tb.jpg",'ニックネーム：おっちゃん <br><br>好きな店：ジェラートピケ・SABON <br><br>好きなお菓子：堅あげポテト(うすしお) <br><br>好きな顔：ベビーフェイス <br><br>好きな歌：YUKI.(特に『同じ手』) <br><br>好きな街：みなとみらい・日比谷公園 <br><br>やりたいこと：ピクニック <br><br>趣味：カフェほっこり・お散歩 <br><br>常に思う事：人に幸せをもたらしたい。 <br><br>誰も悲しまない世界を作りたい <br><br>picture 2 of 3'],
+                  ["members/pic/yurika_o/p3.jpg","members/pic/yurika_o/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               'イベント係<br>田中理美':[
+                  ["members/pic/satomi_t/p1.jpg","members/pic/satomi_t/p1_tb.jpg",'１月１２日生まれ <br><br>ツンとちょっと辛口な彼女はきっとツンデレ！ <br>時折見せる満面な笑みを見るとメロメロ <br><br>picture 1 of 3'],
+                  ["members/pic/satomi_t/p2.jpg","members/pic/satomi_t/p2_tb.jpg",'趣味：お寺巡り・当てのない一人旅 <br><br>好きな食べ物：チーズケーキ・キムチ鍋 <br><br>座右の銘：苦労なしに喜びはない <br><br>休日の過ごし方：バイト・友達とカフェ巡り <br><br>好きな作品：プラダを着た悪魔 <br><br>好きな言葉：その瞬間を楽しむ <br><br>好きなブランド：Samantha Thavasa <br><br>picture 2 of 3'],
+                  ["members/pic/satomi_t/p3.jpg","members/pic/satomi_t/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               'イベント係/MFC<br>村中麻衣':[
+                  ["members/pic/mai_m/p1.jpg","members/pic/mai_m/p1_tb.jpg",'１０月３１日生まれ <br><br>ＭＦＣ所属-loveまさし様- <br><br>甘いもの大好きなまいまい！ <br><br>三度の飯よりケーキが好き！ <br>だからケーキ好き過ぎてバイトもケーキ屋さん<br><br>picture 1 of 3'],
+                  ["members/pic/mai_m/p2.jpg","members/pic/mai_m/p2_tb.jpg",'ニックネーム：まいまい <br><br>好きな食べ物：ケーキ・ケーキ・ケーキ <br><br>好き：とにかく持ち物は全てピンク <br><br>特技：おやすみ３秒 <br><br>特徴：身体の半分は糖分で出来てます <br><br>picture 2 of 3'],
+                  ["members/pic/mai_m/p3.jpg","members/pic/mai_m/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               'イベント係 中村旭':[
+                  ["members/pic/asahi_n/p1.jpg","members/pic/asahi_n/p1_tb.jpg",'１１月４日生まれ <br><br>美人で優しい旭！ <br>ボードも上手で欠点ナシ！ <br>カナダ留学経験あり！ <br>ついに、日本に帰ってきました！<br><br>picture 1 of 3'],
+                  ["members/pic/asahi_n/p2.jpg","members/pic/asahi_n/p2_tb.jpg",'性格：おっちょこちょこちょい <br><br>趣味：人間観察・バレーボール・バドミントン・スノボ <br><br>好きなタイプ：笑わせてくれる人・男らしい人 <br><br>好きな動物：愛犬・オラウータン <br><br>将来の夢：いつか猿飼いたい！ <br><br>休日の過ごし方：寝る・バイト<br>イケメン店員のいるカフェで目の保養 <br><br>picture 2 of 3'],
+                  ["members/pic/asahi_n/p3.jpg","members/pic/asahi_n/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               'モバイル版Web係<br>広瀬雅之':[
+                  ["members/pic/masayuki_h/p1.jpg","members/pic/masayuki_h/p1_tb.jpg",'１１月８日生まれ <br><br>見た目も中身も予測不可能！ <br>神出鬼没でいつ出会えるかわからない <br>超レアキャラ！！！ <br>神奈川２位くらいの太鼓の達人<br><br>picture 1 of 3'],
+                  ["members/pic/masayuki_h/p2.jpg","members/pic/masayuki_h/p2_tb.jpg",'趣味：食べ歩き <br><br>好きな食べ物：粉雪 <br><br>座右の銘：てめぇの人生二度ともうない <br><br>休日の過ごし方：ぴんあぽ <br><br>好きな作品：グランドキャニオン<br><br> チャームポイント：ケツのホクロ <br><br>好きな言葉：まほうのことばで <br>たのしいなかまがぽぽぽぽ～ん <br><br>好きなブランド：ＧＵＣＣＩ <br><br>将来像：幸せの家庭 <br><br>picture 2 of 3'],
+                  ["members/pic/masayuki_h/p3.jpg","members/pic/masayuki_h/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ],
+               'カボT係<br>徳留みなみ':[
+                  ["members/pic/minami_t/p1.jpg","members/pic/minami_t/p1_tb.jpg",'８月１９日生まれ <br><br>女の子が失恋すると夜の海岸へ <br>ドライブに連れてってくれるみなみ様 <br><br>みなみ様ＦＣが出来るのも時間の問題・・・ <br>新１女よ！私についてこい！！ <br>ボードの上手い立派な女に育ててやる！！！ <br><br>picture 1 of 3'],
+                  ["members/pic/minami_t/p2.jpg","members/pic/minami_t/p2_tb.jpg",'趣味：ドライブ <br><br>好きな作品：蜷川実花 <br><br>好きな食べ物：白ワイン・チョコレート <br><br>好きな言葉：適当！(いい意味でｗ) <br><br>休日の過ごし方：たーくさん寝てからの夜カフェ <br><br>picture 2 of 3'],
+                  ["members/pic/minami_t/p3.jpg","members/pic/minami_t/p3_tb.jpg",'<br><br>picture 3 of 3']
+               ]
+            }
+            var s="";
+            for(var i in $imgs){
+               $title=i;
+               for(var j=0; j<$imgs[i].length; j++){
+                  $original=$imgs[i][j][0];
+                  $thumb=$imgs[i][j][1];
+                  $desc=$imgs[i][j][2];
+                  s+='<li>';
+                  s+='   <a class="thumb" name="leaf" href="'+$original+'" title="'+$title+'">';
+                  s+='      <img src="'+$thumb+'" alt="'+$desc+'" />';
+                  s+='   </a>';
+                  s+='   <div class="caption">';
+                  s+='      <div class="image-title">'+$title+'</div>';
+                  s+='      <div class="image-desc">'+$desc+'</div>';
+                  s+='   </div>';
+                  s+='</li>';
+               }
+            }
+            $("#thumbs ul.thumbs").append(s);
+            
+            
+            
+            // We only want these styles applied when javascript is enabled
+            $('div.navigation').css({'width' : '300px', 'float' : 'left'});
+            $('div.content').css('display', 'block');
+ 
+            // Initially set opacity on thumbs and add
+            // additional styling for hover effect on thumbs
+            var onMouseOutOpacity = 0.67;
+            $('#thumbs ul.thumbs li').opacityrollover({
+               mouseOutOpacity:   onMouseOutOpacity,
+               mouseOverOpacity:  1.0,
+               fadeSpeed:         'fast',
+               exemptionSelector: '.selected'
+            });
+            
+            // Initialize Advanced Galleriffic Gallery
+            var gallery = $('#thumbs').galleriffic({
+               delay:                     2500,
+               numThumbs:                 15,
+               preloadAhead:              10,
+               enableTopPager:            true,
+               enableBottomPager:         true,
+               maxPagesToShow:            7,
+               imageContainerSel:         '#slideshow',
+               controlsContainerSel:      '#controls',
+               captionContainerSel:       '#caption',
+               loadingContainerSel:       '#loading',
+               renderSSControls:          true,
+               renderNavControls:         true,
+               playLinkText:              'スライドショーを再生する',
+               pauseLinkText:             'スライドショーを停止する',
+               prevLinkText:              '&lsaquo; 前へ',
+               nextLinkText:              '次へ &rsaquo;',
+               nextPageLinkText:          'Next &rsaquo;',
+               prevPageLinkText:          '&lsaquo; Prev',
+               enableHistory:             false,
+               autoStart:                 false,
+               syncTransitions:           true,
+               defaultTransitionDuration: 900,
+               onSlideChange:             function(prevIndex, nextIndex) {
+                  // 'this' refers to the gallery, which is an extension of $('#thumbs')
+                  this.find('ul.thumbs').children()
+                     .eq(prevIndex).fadeTo('fast', onMouseOutOpacity).end()
+                     .eq(nextIndex).fadeTo('fast', 1.0);
+               },
+               onPageTransitionOut:       function(callback) {
+                  this.fadeTo('fast', 0.0, callback);
+               },
+               onPageTransitionIn:        function() {
+                  this.fadeTo('fast', 1.0);
+               }
+            });
+         });
+      </script>
+      <!-- CSS -->
+      <style type="text/css">
+         div#page {
+            width: 900px;
+            background: url("images/back.png") repeat;
+            margin: 0 auto;
+            text-align: left;
+            border:1px solid #ddd;
+         }
+         div.content {
+            display: none;
+            float: right;
+            width: 320px; 
+         }
+         div.content a, div.navigation a {
+            text-decoration: none;
+            color: #777;
+         }
+         div.content a:focus, div.content a:hover, div.content a:active {
+            text-decoration: underline;
+         }
+         div.controls {
+            margin-top: 5px;
+            height: 23px;
+         }
+         div.controls a {
+            padding: 5px;
+         }
+         div.ss-controls {
+            float: left;
+         }
+         div.nav-controls {
+            float: right;
+         }
+         div.slideshow-container {
+            position: relative;
+            clear: both;
+            height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
+         }
+         div.loader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url('loader.gif');
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 320px;
+            height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
+         }
+         div.slideshow {
+
+         }
+         div.slideshow span.image-wrapper {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+         }
+         div.slideshow a.advance-link {
+            display: block;
+            width: 320px;
+            height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
+            line-height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
+            text-align: center;
+         }
+         div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
+            text-decoration: none;
+         }
+         div.slideshow img {
+            vertical-align: middle;
+            border: 1px solid #ccc;
+         }
+         div.download {
+            float: right;
+         }
+         div.caption-container {
+            position: relative;
+            float: left;
+            height: 75px;
+         }
+         span.image-caption {
+            display: block;
+            position: absolute;
+            width: 200px;
+            top: 0;
+            left: 0;
+         }
+         div.caption {
+            padding: 12px;
+         }
+         div.image-title {
+            font-weight: bold;
+            font-size: 1.4em;
+         }
+         div.image-desc {
+            line-height: 1.3em;
+            padding-top: 12px;
+            font-size: 12px;
+         }
+         div.navigation {
+            /* The navigation style is set using jQuery so that the javascript specific styles won't be applied unless javascript is enabled. */
+         }
+         ul.thumbs {
+            clear: both;
+            margin: 0;
+            padding: 0;
+         }
+         ul.thumbs li {
+            float: left;
+            padding: 0;
+            margin: 5px 10px 5px 0;
+            list-style: none;
+         }
+         a.thumb {
+            padding: 2px;
+            width:75px; height:75px;
+            display: block;
+            border: 1px solid #ccc;
+         }
+         ul.thumbs li.selected a.thumb {
+            background: #000;
+         }
+         a.thumb:focus {
+            outline: none;
+         }
+         ul.thumbs img {
+            border: none;
+            display: block;
+         }
+         div.pagination {
+            clear: both;
+         }
+         div.navigation div.top {
+            margin-bottom: 12px;
+            height: 11px;
+         }
+         div.navigation div.bottom {
+            margin-top: 12px;
+         }
+         div.pagination a, div.pagination span.current, div.pagination span.ellipsis {
+            display: block;
+            float: left;
+            margin-right: 2px;
+            padding: 4px 7px 2px 7px;
+            border: 1px solid #ccc;
+         }
+         div.pagination a:hover {
+            background-color: #eee;
+            text-decoration: none;
+         }
+         div.pagination span.current {
+            font-weight: bold;
+            background-color: #000;
+            border-color: #000;
+            color: #fff;
+         }
+         div.pagination span.ellipsis {
+            border: none;
+            padding: 5px 0 3px 2px;
+         }
+      </style>
+   </head>
+<body style="text-align: center;">
+<div id="container-except-home">
+	<div id="navigation-main">
+		<div id="navigation-content">
+		<a href="index.html"><img src="images/home.png" class="navigation-text"></a>　
+		<a href="member.html"><img src="images/member.png" class="navigation-text"></a>　
+		<a href="gallery.html"><img src="images/gallery.png" class="navigation-text"></a>　
+		<a href="http://www.youtube.com/user/CAVOSVIDEO?blend=1&ob=5"><img src="images/movie.png" class="navigation-text"></a>　
+		<a href="http://skiteamcavos.bbs.fc2.com/"><img src="images/bbs.png" class="navigation-text"></a>　
+		<a href="links.html"><img src="images/links.png" class="navigation-text"></a>　
+		<a href="faq.html"><img src="images/faq.png" class="navigation-text"></a>　
+		</div>
+	</div>
+	
+	<div class="navigation-shita">
+	</div>
+	
+	<br clear="left">
+	
+	<div id="main-except-home">
+	<img src="images/member_title.png" id="title">
+		<div id="member-top">
+		<img src="images/member_guide.png"><br><br><!-- メンバー紹介を見るには下の画像をクリック！ -->
+		<img src="members/pic/member_top.jpg" id="topimage" style="position:relative;" onclick ="firsttouch();">
+		</div>
+
+		<br>
+
+		<div id="page">
+   <div id="slide-container">
+      <!-- 画像表示エリア -->
+      <div id="gallery" class="content">
+         <div id="controls" class="controls"></div>
+         <div class="slideshow-container">
+            <div id="loading" class="loader"></div>
+            <div id="slideshow" class="slideshow"></div>
+         </div>
+      </div>
+      <!-- サムネイルナビゲーション -->
+      <div id="thumbs" class="navigation">
+         <ul class="thumbs noscript"></ul>
+      </div>
+      <!-- キャプション -->
+         <div id="caption" class="caption-container"></div>
+      <!-- サムネイルナビゲーション -->
+      <div style="clear: both;"></div>
+</div>
+	<div style="text-align:center;"><a href="http://cavos.yukihotaru.com/cavoshp/member/top.html" target="_blank" style="color: #777;">上記とは別のCutieなメンバーページはこちらから</a></div>
+   </div>
+	</div><!-- end of main -->
+
+	<div id="footer-ue">
+	</div>
+
+	<div id="footer-except-home">
+		<div id="copyright">
+	&copy; <img src="images/copyright.png">
+		</div>
+	</div>
+	
+	<div id="footer-shita">
+	</div>
+</div><!-- end of container -->
+<script type="text/javascript">
+	var page=document.getElementById("page");
+	page.style.display = "none";
+	function firsttouch(){
+	var img = document.getElementById("member-top");
+	img.style.display = "none";
+	page.style.display = "inline";
+	page.style.width = "900px";
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,405 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, 
+fieldset, input, textarea, p, blockquote, th, td{
+    margin: 0; 
+    padding: 0;
+}
+html{
+    overflow-y: scroll;
+}
+h1, h2, h3, h4, h5, h6{
+    font-size: 100%; 
+    font-weight: normal;
+}
+ol, ul{
+    list-style:none;
+}
+fieldset, img{
+     border:0;
+}
+table{
+    border-collapse: collapse; 
+    border-spacing:0;
+}
+caption, th{
+    text-align: left;
+}
+address, caption, cite, code, dfn, em, strong, th, var{
+    font-style: normal; 
+    font-weight: normal;
+}
+
+#container{
+background: url(../images/back.png) repeat;
+width: 1020px;
+height: 1228px;
+margin: auto;
+text-align:center;
+}
+
+#container-except-home{/* ホームページ以外のページの全体 */
+background: url(../images/back.png) repeat;
+width: 1020px;
+margin: auto;
+text-align:center;
+}
+
+#slice-container{
+background: url(../images/back.png) repeat;
+width:900px;
+}
+
+#navigation-main{
+position: relative;
+background: #03c6f7;
+width: 1020px;
+height: 54px;
+text-align:center;
+}
+
+#navigation-content{
+position:relative;
+padding:25px;
+width:700px;
+height:50px;
+margin:auto;
+}
+
+.navigation-text1 img{
+position: relative;
+float:left;
+text-align:center;
+margin: auto;
+}
+
+.navigation-shita{
+position: relative;
+background: #3d3d3d bottom;
+width: 1020px;
+height: 7px;
+}
+
+.navigation-shita img {
+    position: relative;
+    left: -5px; /* 画像を左へ移動 */
+    top: -5px; /* 画像を上へ移動 */
+    padding: 5px; /* 画像枠 */
+    background: #ffffe0; /* paddingを設定した場合の背景色 */
+    border: 1px solid #999999; /* 画像の枠線 */
+}
+
+#main{
+position: relative;
+height: 800px;
+text-align: center;
+margin-top: 40px;
+}
+
+#main-except-home{
+width: 900px;
+position: relative;
+text-align: center;
+margin: auto;
+color: #373737;
+}
+
+#welcome img{
+position: relative;
+text-align: center;
+margin-top: 20px;
+}
+
+img#since{
+position: relative;
+text-align: center;
+margin-top: 10px;
+margin-bottom: 15px;
+}
+
+img#title{/*　各ページタイトル　*/
+position:relative;
+text-align: center;
+margin-bottom: 20px;
+}
+
+img#topimage{
+position: relative;
+text-align: center;
+}
+
+table#waku{
+border: 3px #343434 solid;
+}
+
+/* ★Gallery★ */
+#silverlight{
+width:700px;
+height:100px;
+margin:auto;
+text-align:center;
+}
+
+#event-choice{
+width:900px;
+}
+
+table#gallery-event{
+border: 8px #343434 solid;
+margin:auto;
+text-align:center;
+}
+
+table#gallery-event td{
+padding: 2px;
+border: 5px #343434 solid;
+}
+
+a:link.event-name{
+color:#777;
+}
+
+a:visited.event-name{
+color:#777;
+}
+
+a:hover.event-name{
+color:#000;
+}
+
+a:active.event-name{
+color:#000;
+}
+
+/* ★Links★ */
+#links-ue{
+width: 900px;
+height: 200px;
+text-align: center;
+}
+
+#links-shita{
+width: 900px;
+height: 200px;
+text-align: center;
+}
+
+#sportshop{
+width: 200px;
+position:relative;
+float:left;
+}
+
+#hotel{
+width: 200px;
+position:relative;
+float:left;
+margin-left:120px;
+margin-right:120px;
+}
+
+#gerende{
+width: 200px;
+position:relative;
+float:left;
+}
+
+#maker{
+width: 200px;
+position:relative;
+float:left;
+}
+
+#university{
+width: 200px;
+position:relative;
+float:right;
+}
+
+/* ★FAQ★ */
+#address{
+height:400px;
+}
+
+.shadow{
+width:600px;
+margin:auto;
+text-align:center;
+-moz-box-shadow: 5px 5px 5px #000;
+-webkit-box-shadow: 5px 5px 5px #000;
+}
+
+img#copy{/* Ski & Snowboard Team CAVOSは～のデカテキスト*/
+position: relative;
+text-align: center;
+margin-top: 10px;
+}
+
+img#copy-sub{/* 大学生活うんちゃらのテキスト*/
+position: relative;
+text-align: center;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+
+#footer-ue{
+position:relative;
+background: #03c6f7;
+width:1020px;
+height:18px;
+border-bottom: 2px #292929 solid;
+}
+
+#footer-shita{
+position:relative;
+background: #03c6f7;
+width:1020px;
+height:18px;
+border-bottom: 2px #292929 solid;
+}
+
+#footer{
+position: relative;
+background: #373737;
+width: 1020px;
+text-align: center;
+}
+
+#footer-except-home{/* ホームページ以外のページのフッター */
+position: relative;
+background: #373737;
+color: #03c6f7;
+width: 1020px;
+height: 30px;
+text-align: center;
+}
+
+#copyright{
+position: relative;
+top:5px;
+height:15px;
+}
+
+#about{
+position: relative;
+width:285px;
+margin-left:60px;
+text-align:left;
+float:left;
+}
+
+#recent{
+position: relative;
+width:290px;
+margin-left:20px;
+text-align:left;
+float:left;
+}
+
+#twitter{
+margin-bottom:10px;
+}
+
+#sticker{
+position: relative;
+width:280px;
+margin-left:20px;
+text-align:left;
+float:left;
+}
+
+img#sticker-image{
+position: relative;
+margin-top:20px;
+margin-bottom:10px;
+width:60%;
+}
+
+#weather-info{
+margin-bottom:10px;
+}
+
+img#weather-infomation{
+margin-bottom:10px;
+}
+
+#weather{
+width:280px;
+padding-top:10px;
+padding-left:5px;
+padding-bottom:10px;
+color:#03c6f7;
+border: 2px #03c6f7 solid;
+border-radius: 10px;         /* CSS3 */
+   -moz-border-radius: 10px;    /* Firefox */
+   -webkit-border-radius: 10px; /* Safari,Chrome */
+}
+#weather2{
+width:280px;
+padding-top:10px;
+padding-left:5px;
+padding-bottom:10px;
+color:#03c6f7;
+border: 2px #03c6f7 solid;
+border-radius: 10px;         /* CSS3 */
+   -moz-border-radius: 10px;    /* Firefox */
+   -webkit-border-radius: 10px; /* Safari,Chrome */
+}
+#weather-title{
+margin-top:3px;
+text-align:center;
+color:#03c6f7;
+font-size:12px;
+}
+#weather-title2{
+margin-top:7px;
+text-align:center;
+color:#03c6f7;
+font-size:12px;
+}
+#weather-click-here{
+width:280px;
+height:97px;
+cursor: pointer;
+text-align:center;
+font-weight:bold;
+color:#03c6f7;
+border: 2px #03c6f7 solid;
+border-radius: 10px;         /* CSS3 */
+   -moz-border-radius: 10px;    /* Firefox */
+   -webkit-border-radius: 10px; /* Safari,Chrome */
+}
+
+table.t-weather{
+width:280px;
+color:#03c6f7;
+}
+td.t-weather{
+width:60px;
+background: #373737;
+}
+a.weather-detail{
+color:#03c6f7;
+}
+a:visited.weather-detail{
+color:#03c6f7;
+}
+
+#next{
+width:100px;
+font-size:10px;
+margin:auto;
+text-align:center;
+cursor: pointer;
+text-decoration: underline;
+}
+#back{
+width:100px;
+font-size:10px;
+margin:auto;
+text-align:center;
+cursor: pointer;
+text-decoration: underline;
+}
+
+#facebook-iine{
+position:relative;
+}

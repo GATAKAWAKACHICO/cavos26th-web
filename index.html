@@ -1,0 +1,164 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1">
+<meta name="description" content="スキー＆スノーボードサークルCAVOSのホームページ。 当サイトは東工大、慶應、英和のインカレサークルCAVOSのサイトになります.">
+<meta name="keywords" content="CAVOS,カボス，CABOS,cavos,cabos,東工,慶應,東洋英和">
+<meta name="CAVOS" content="Ski & Snowboard Team">
+<meta property="og:title" content="Ski & Snowboard Team CAVOS"/>
+<meta property="og:site_name" content="CAVOS">
+<meta property="og:type" content="sport"/>
+<meta property="og:url" content="http://cavos.yukihotaru.com/"/>
+<meta property="og:image" content="http://cavos.yukihotaru.com/images/board.png"/>
+<meta property="fb:admins" content="100002278074668"/>
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<link rel="stylesheet" type="text/css" href="css/cavostyle.css">
+<script src="js/jquery-1.6.1.min.js"></script>
+<script src="js/cavos_weather_api.js"></script>
+<script type="text/javascript">
+if ((navigator.userAgent.indexOf('iPhone') > 0 && navigator.userAgent.indexOf('iPad') == -1) || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {//スマホ
+	location.href = "http://cavos.yukihotaru.com/sp/";
+	} else {
+	//PCなど
+	}
+function link(url){
+	location.href = url;
+}
+</script>
+<title>CAVOS Home Page</title>
+</head>
+<body style="text-align: center;">
+<div id="container">
+	<div id="navigation-main">
+		<div id="navigation-content">
+		<a href="index.html"><img src="images/home.png" class="navigation-text"></a>　
+		<a href="member.html"><img src="images/member.png" class="navigation-text"></a>　
+		<a href="gallery.html"><img src="images/gallery.png" class="navigation-text"></a>　
+		<a href="http://www.youtube.com/user/CAVOSVIDEO?blend=1&ob=5"><img src="images/movie.png" class="navigation-text"></a>　
+		<a href="http://skiteamcavos.bbs.fc2.com/"><img src="images/bbs.png" class="navigation-text"></a>　
+		<a href="links.html"><img src="images/links.png" class="navigation-text"></a>　
+		<a href="faq.html"><img src="images/faq.png" class="navigation-text"></a>　
+		</div>
+	</div>
+	
+	<div class="navigation-shita">
+	</div>
+	
+	<br clear="left">
+	
+	<div id="main">
+	<img src="images/top_logo.png"><br>
+		<img src="images/welcome.png" id="welcome"><br>
+		<img src="images/since1984.png" id="since"><br>
+		<p class="shadow"><table id="waku"><tr><td><img src="images/IMG_5253_3.jpg" id="topimage"></tr></td></table></p><br>
+		<img src="images/copy2.png" id="copy"><br>
+		<img src="images/copy_sub.png" id="copy-sub"><br>
+	</div><!-- end of main -->
+
+	<div id="footer-ue">
+	</div>
+
+	<div id="footer">
+		<div id="about">
+		<img src="images/about.png"><br><br>
+		<iframe title="YouTube video player" width="250" height="218" src="http://www.youtube.com/embed/7vaKB5Xuzpk" frameborder="0" allowfullscreen=""></iframe><br>
+		<img src="images/cavos_social.png"><br>
+		<a href="http://twitter.com/#!/TEAMCAVOS"><img src="images/twitter.png"></a>　
+		<a href="http://www.facebook.com/pages/Ski-Snowboard-Team-CAVOS/140787539347101"><img src="images/facebook.png"></a>　
+		<a href="http://mixi.jp/view_community.pl?id=593241"><img src="images/mixi.png"></a>　
+		<a href="http://ameblo.jp/team-cavos/"><img src="images/ameba.png"></a>　
+		<a href="http://www.youtube.com/user/CAVOSVIDEO?blend=1&ob=5"><img src="images/youtube.png"></a>
+		</div>
+
+		<div id="recent">
+		<img src="images/recent.png"><br><br>
+			<div id="twitter">
+		<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 2,
+  interval: 6000,
+  width: 250,
+  height: 100,
+  theme: {
+    shell: {
+      background: '#0fc2cf',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#1131b0',
+      color: '#ffffff',
+      links: '#4aed05'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: false,
+    hashtags: true,
+    timestamp: true,
+    avatars: false,
+    behavior: 'all'
+  }
+}).render().setUser('TEAMCAVOS').start();
+</script>
+			</div><!-- end of twitter -->
+			<br>
+			<div id="master">
+			<!-- NSM -->
+<script type="text/javascript">
+var lpoJsProt = (document.location.protocol == "https:") ? "https://" : "http://";
+document.write("<sc"+"ript type=\"text\/javascript\" src=\""+lpoJsProt+"nsm.shinobi.jp\/initial\/?contractid=14502\"><\/sc"+"ript>");
+</script>
+<!-- /NSM -->
+			</div><!--end of サイトマスター -->
+		</div>
+
+		<div id="sticker">
+		<div id="cavosticker">
+		<img src="images/sticker.png"><br>
+		<img src="images/cavosticker.png" id="sticker-image">
+		</div>
+		<br>
+
+		<div id="weather-info">
+		<img src="images/weatherinfomation.png" id="weather-infomation"><br>
+			<div id="weather-click-here" onclick="StartWeather();">
+				<p style="position:relative; margin-top:20px;">Click Here!</p>
+				<p style="font-size:10px;">Supported except IE(InternetExplore)</p>
+			</div>
+
+			<div id="weather" style="display:none;">
+				<div id="id_result">Loading...</div>
+				<div id="id_result2">Loading...</div>
+				<div id="id_result3">Loading...</div>
+				<div id="weather-title">Loading...</div>
+				<div id="next" onclick="GoNextWeather();">
+				<p style="text-decoration:underline;">＞＞NEXT</span>
+				</div>
+			</div>
+			<div id="weather2" style="display:none;">
+				<div id="id_result4">Loading...</div>
+				<div id="id_result5">Loading...</div>
+				<div id="id_result6">Loading...</div>
+				<div id="weather-title2">Loading...</div>
+				<div id="back" onclick="GoBackWeather();">
+				<p style="text-decoration:underline;">＜＜BACK</span>
+				</div>
+			</div>
+		</div><!-- end of weather-info -->
+
+		<div id="facebook-iine">
+		<iframe src="http://www.facebook.com/plugins/like.php?app_id=196746390388485&amp;href=http%3A%2F%2Fcavos.yukihotaru.com%2F&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=true&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+		</div>
+		<br><br>
+		</div>
+		<br clear="left">
+	</div>
+
+</div><!-- end of container -->
+</body>
+</html>
